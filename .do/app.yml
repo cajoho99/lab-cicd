@@ -1,0 +1,24 @@
+
+features:
+  - buildpack-stack=ubuntu-22
+ingress:
+  rules:
+    - component:
+        name: cajoho99-lab-cicd
+      match:
+        path:
+          prefix: /
+name: cajoho99-cicd-app
+region: ams
+services:
+  - health_check:
+      http_path: /
+    http_port: 80
+    image:
+      registry: cajoho99
+      registry_type: GHCR
+      repository: lab-cicd
+      tag: latest
+    instance_count: 1
+    instance_size_slug: apps-s-1vcpu-0.5gb
+    name: cajoho99-lab-cicd
