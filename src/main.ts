@@ -22,3 +22,16 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 `
 
 setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+
+
+export const findCommonNumbers = (num1: number, num2: number) => {
+  const a = num1 + "";
+  const b = num2 + "";
+
+  const c = a + b;
+
+  const d = new Set(c);
+
+  return d;
+
+}
