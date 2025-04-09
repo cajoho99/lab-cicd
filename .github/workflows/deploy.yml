@@ -3,7 +3,7 @@ name: Deploy lab-cicd
 on:
   # Automatically run this pipeline when our build pipeline completes
   workflow_run:
-    workflows: [Build and test lab-cicd]
+    workflows: [Build that boi]
     types: [completed]
     branches: [main]
 
