@@ -18,20 +18,10 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <p class="read-the-docs">
       Click on the Vite and TypeScript logos to learn more
     </p>
+    <h1>${import.meta.env.VITE_API_BASE_URL}</h1>
   </div>
 `
 
 setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
 
 
-export const findCommonNumbers = (num1: number, num2: number) => {
-  const a = num1 + "";
-  const b = num2 + "";
-
-  const c = a + b;
-
-  const d = new Set(c);
-
-  return d;
-
-}
